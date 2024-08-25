@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração de Amor</title>
+    <style>
+        body {
+            background-color: #f8d7da;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: red;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        h3 {
+            color: #d63384;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .heart {
+            font-size: 3em;
+            color: red;
+            margin: 20px;
+            display: inline-block;
+            animation: heartbeat 1s infinite;
+        }
+        .heart:hover {
+            animation: heartbeat-hover 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 20%, 50%, 80%, 100% {
+                transform: scale(1);
+            }
+            10% {
+                transform: scale(1.1);
+            }
+            30% {
+                transform: scale(0.9);
+            }
+            40% {
+                transform: scale(1.1);
+            }
+        }
+        @keyframes heartbeat-hover {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .btn {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #c82373;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .heart {
+                font-size: 2.5em;
+            }
+            .btn {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            .heart {
+                font-size: 2em;
+            }
+            .btn {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Meu amor, eu te amo!</h1>
+        <h3>Declaração de amor</h3>
+        <p>Aqui tem uma surpresa</p>
+        <div class="heart">&#10084;</div>
+        <button class="btn" onclick="displayMessage()">Clique para ver a declaração</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function displayMessage() {
+            const message = "Eu te amo mais do que palavras podem expressar. Você é a luz da minha vida e a razão do meu sorriso. Sempre estarei aqui para você, não importa o que aconteça, te amooooo Rapunzel.";
+            document.getElementById('message').innerText = message;
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
